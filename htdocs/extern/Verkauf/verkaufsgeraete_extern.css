@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF0E6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #D3D3D3;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+nav {
+    text-align: right;
+    flex: 2;
+    margin: 10px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    background-color: #FAF0E6;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #FFD700;
+}
+
+.kachel {
+    width:100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border: 1px solid #D3D3D3;
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top:20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titel {
+    padding-left: 20px;
+}
+
+
+.logo {
+    flex: 1; 
+    margin: 10px;
+    max-width: 150px;
+}
+
+
+.logo img {
+    max-width: 100%;
+    height: auto; 
+}
+
+
+.flex-item {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    width:100%;
+    border: 1px solid #ccc;  
+    padding: 20px;           
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #FFF; 
+}
+
+.flex-item > *:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.bilder-extern {
+    max-height: 450px;
+    overflow: hidden; 
+}
+
+.bilder-extern img {
+    max-height: 100%; 
+    width: auto; 
+    display: block;
+}
+
+
+
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly; 
+}
+
+.product {
+    margin-bottom:20px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+    background-color: #ffffff; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product img {
+    max-width: 100%; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.description-kachel {
+    border: 1px solid #D3D3D3;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; 
+    
+}
+
+/* Medienabfrage für kleinere Bildschirme */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav a {
+        margin: 5px 2px; 
+    }
+}

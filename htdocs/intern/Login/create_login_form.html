@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Erstellung</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="save_login.php" method="post">
+            <h2>Login für Mitarbeiter erstellen</h2>
+            <label for="benutzername">Benutzername:</label>
+            <input type="text" id="benutzername" name="benutzername" required> 
+            
+            <label for="login_passwort">Passwort:</label>
+            <input type="password" id="login_passwort" name="login_passwort" required>
+            
+            <input type="submit" value="Login erstellen">
+        </form>
+    </div>
+    
+</body>
+</html>

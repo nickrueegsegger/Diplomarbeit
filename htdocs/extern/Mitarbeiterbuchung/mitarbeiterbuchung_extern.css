@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF0E6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #D3D3D3;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+nav {
+    text-align: right;
+    flex: 2; 
+    margin: 10px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    background-color: #FAF0E6;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #FFD700;
+}
+
+
+.kachel {
+    border: 1px solid #D3D3D3; 
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #FFF; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #D3D3D3;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #FFD700; 
+}
+
+
+.logo {
+    flex: 1; 
+    margin: 10px;
+    max-width: 150px;
+}
+
+
+.logo img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.titel {
+    padding-left: 20px;
+}
+
+.mitarbeiter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.mitarbeiter {
+    background-color: #ffffff;
+    width: 500px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.mitarbeiter h3 {
+    text-align: center;
+}
+
+.mitarbeiter img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+form input[type="text"], form textarea, form input[type="file"], form label {
+    width: 100%;
+   
+ 
+}
+
+
+form input[type="submit"] {
+    width: 150px;
+    padding: 10px 15px;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Medienabfrage für kleinere Bildschirme */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav a {
+        margin: 5px 2px;
+    }
+}
