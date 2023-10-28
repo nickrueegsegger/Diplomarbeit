@@ -97,11 +97,11 @@ if (isset($_POST['terminDatum'], $_POST['startZeit'], $_POST['endZeit'], $_POST[
             $mailer->isSMTP();
             $mailer->Host = 'asmtp.mail.hostpoint.ch';
             $mailer->SMTPAuth = true;
-            $mailer->Username = 'info@multimedia-shop-langnau.ch';
-            $mailer->Password = 'MoeckliRCF1300!';
+            $mailer->Username = '***';
+            $mailer->Password = '***';
             $mailer->Port = 25;
 
-            $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
+            $mailer->setFrom('***', 'Elektro Liechti AG');
             $mailer->addAddress($_SESSION['user']['Mail'], $_SESSION['user']['Vorname'] . ' ' . $_SESSION['user']['Nachname']);
 
             $mailer->isHTML(true);
@@ -120,8 +120,8 @@ if (isset($_POST['terminDatum'], $_POST['startZeit'], $_POST['endZeit'], $_POST[
 
 
             $mailer->clearAddresses();
-            $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
-            $mailer->addAddress('runi38@gmail.com');
+            $mailer->setFrom('***', 'Elektro Liechti AG');
+            $mailer->addAddress('***');
             $mailer->Subject = 'Neuer Beratungstermin!';
             $mailer->Body = $_SESSION['user']['Vorname'] . " " . $_SESSION['user']['Nachname'] . " (Telefonnummer: " . $telefonnummer . ") hat soeben einen neuen Beratungstermin bei " . $mitarbeiterVorname . " " . $mitarbeiterNachname . " gebucht: Vom " . $formattedStartDatetime . " zum " . $formattedEndDatetime . ".";
             $mailer->send();

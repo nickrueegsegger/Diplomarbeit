@@ -68,11 +68,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['user'])) {
                         $mailer->isSMTP();
                         $mailer->Host = 'asmtp.mail.hostpoint.ch';
                         $mailer->SMTPAuth = true;
-                        $mailer->Username = 'info@multimedia-shop-langnau.ch';
-                        $mailer->Password = 'MoeckliRCF1300!';
+                        $mailer->Username = '***';
+                        $mailer->Password = '***';
                         $mailer->Port = 25;
 
-                        $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
+                        $mailer->setFrom('***', 'Elektro Liechti AG');
                         $mailer->addAddress($mail, $vorname . ' ' . $nachname);
                         $mailer->isHTML(true);
                         $mailer->Subject = 'Reservierungsbestätigung';
@@ -81,8 +81,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['user'])) {
 
 
                         $mailer->clearAddresses();
-                        $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
-                        $mailer->addAddress('runi38@gmail.com');
+                        $mailer->setFrom('***', 'Elektro Liechti AG');
+                        $mailer->addAddress('***');
                         $mailer->Subject = 'Neue Gerätereservierung!';
                         $mailer->Body = "Folgender Kunde hat soeben ein Gerät reserviert: $vorname $nachname (Tel: $telefonnummer). Mietgerät: $geraetetyp, Vermietet vom $formattedStartDatum bis zum $formattedEndDatum";
                         $mailer->send();

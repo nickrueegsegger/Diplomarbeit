@@ -42,11 +42,11 @@ while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
         $mailer->isSMTP();
         $mailer->Host = 'asmtp.mail.hostpoint.ch';
         $mailer->SMTPAuth = true;
-        $mailer->Username = 'info@multimedia-shop-langnau.ch';
-        $mailer->Password = 'MoeckliRCF1300!';
+        $mailer->Username = '***';
+        $mailer->Password = '***';
         $mailer->Port = 25;
 
-        $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
+        $mailer->setFrom('***', 'Elektro Liechti AG');
         $mailer->addAddress($email, $vorname . ' ' . $nachname);
         $mailer->isHTML(true);
         $mailer->Subject = 'Erinnerung an Ihren Beratungstermin';

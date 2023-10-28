@@ -34,11 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mailer->isSMTP();
             $mailer->Host = 'asmtp.mail.hostpoint.ch';
             $mailer->SMTPAuth = true;
-            $mailer->Username = 'info@multimedia-shop-langnau.ch';
-            $mailer->Password = 'MoeckliRCF1300!';
+            $mailer->Username = '***';
+            $mailer->Password = '***';
             $mailer->Port = 25;
 
-            $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
+            $mailer->setFrom('***', 'Elektro Liechti AG');
             $mailer->addAddress($_POST['Mail'], $vorname . ' ' . $nachname);
 
 
@@ -48,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mailer->send();
 
             $mailer->clearAddresses();
-            $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
-            $mailer->addAddress('runi38@gmail.com');
+            $mailer->setFrom('***', 'Elektro Liechti AG');
+            $mailer->addAddress('***');
             $mailer->Subject = 'Neue Kundenregistrierung!';
             $mailer->Body = "Folgender Kunde hat sich soeben registriert: $vorname $nachname";
             $mailer->send();

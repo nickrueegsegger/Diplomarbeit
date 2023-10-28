@@ -37,11 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mailer->isSMTP();
             $mailer->Host = 'asmtp.mail.hostpoint.ch';
             $mailer->SMTPAuth = true;
-            $mailer->Username = 'info@multimedia-shop-langnau.ch';
-            $mailer->Password = 'MoeckliRCF1300!';
+            $mailer->Username = '***';
+            $mailer->Password = '***';
             $mailer->Port = 25;
 
-            $mailer->setFrom('info@multimedia-shop-langnau.ch', 'Elektro Liechti AG');
+            $mailer->setFrom('***', 'Elektro Liechti AG');
             $mailer->addAddress($to);
             $mailer->isHTML(true);
             $mailer->Subject = $subject;
